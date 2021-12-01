@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Title</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- basic.css -->
+    <link rel="stylesheet" href="./stylesheets/basic.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav id="navbar" class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Website</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./admin.html">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" href="#signUpModal">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" href="#signInModal">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" href="#signOutModal" href="#">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- header -->
+    <header id="homeHeader" class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Home Page</h1>
+            <p class="lead">Header helper text</p>
+            <div>
+                <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/" target="_blank"
+                    class="btn btn-primary">Bootstrap</a>
+                <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free" target="_blank"
+                    class="btn btn-success">Font awesome</a>
+                <a href="https://firebase.google.com/" target="_blank" class="btn btn-warning">Firebase</a>
+
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <!-- section -->
+    <section class="py-4">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="text-center">Product List</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <!-- productList -->
+            <div id="productList" class="row">
+                <!-- col -->
+                <div class="col-md-4 col-6">
+                    <div class="card my-3">
+                        <img class="card-img-top" src="./images/image1.jpeg" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title mb-0">Product 1</h4>
+                            <div class="category-list my-2">
+                                <span class="badge badge-primary">#SALE</span>
+                                <span class="badge badge-success">#NEW</span>
+                            </div>
+                            <p class="price">$ 45 NTD
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            Updated at 2021.11.04 <i class="far fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- col -->
+                <!-- col -->
+                <div class="col-md-4 col-6">
+                    <div class="card my-3">
+                        <img class="card-img-top" src="./images/image2.jpeg" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title mb-0">Product 2</h4>
+                            <div class="category-list my-2">
+                                <span class="badge badge-primary">#SALE</span>
+                            </div>
+                            <p class="price">$ 90 NTD</p>
+                        </div>
+                        <div class="card-footer">
+                            Updated at 2021.11.04 <i class="far fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- col -->
+                <!-- col -->
+                <div class="col-md-4 col-6">
+                    <div class="card my-3">
+                        <img class="card-img-top" src="./images/image3.jpeg" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title mb-0">Product 3</h4>
+                            <div class="category-list my-2">
+                                <span class="badge badge-success">#NEW</span>
+                                <span class="badge badge-warning">#BEST</span>
+                            </div>
+                            <p class="price">$ 120 NTD</p>
+                        </div>
+                        <div class="card-footer">
+                            Updated at 2021.11.04 <i class="far fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- col -->
+                <!-- col -->
+                <div class="col-md-4 col-6">
+                    <div class="card my-3">
+                        <img class="card-img-top" src="./images/image4.jpeg" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title mb-0">Product 4</h4>
+                            <div class="category-list my-2">
+                                <span class="badge badge-success">#NEW</span>
+                            </div>
+                            <p class="price">$ 180 NTD</p>
+                        </div>
+                        <div class="card-footer">
+                            Updated at 2021.11.04 <i class="far fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- col -->
+                <!-- col -->
+                <div class="col-md-4 col-6">
+                    <div class="card my-3">
+                        <img class="card-img-top" src="./images/image5.jpeg" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title mb-0">Product 5</h4>
+                            <div class="category-list my-2">
+                                <span class="badge badge-danger">#LIMITED</span>
+                            </div>
+                            <p class="price">$ <span class="text-danger">220</span> <s>1200</s> NTD
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            Updated at 2021.11.04 <i class="far fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- col -->
+
+            </div>
+            <!-- productList end -->
+        </div>
+    </section>
+    <!-- section end -->
+    <!-- footer -->
+    <footer id="footer" class="text-center mt-4">
+        <p>Copy right &copy; 2021</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- signUpModal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form id="signUpForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="signUpEmail">Sign up email</label>
+                        <input id="signUpEmail" type="email" class="form-control" placeholder="email..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpPassword">Sign up password</label>
+                        <input id="signUpPassword" type="text" class="form-control" minlength="6"
+                            placeholder="password..." required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- signUpModal end -->
+    <!-- signInModal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form id="signInForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="signInEmail">Sign in email</label>
+                        <input id="signInEmail" type="email" class="form-control" placeholder="email..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signInPassword">Sign in password</label>
+                        <input id="signInPassword" type="text" class="form-control" minlength="6"
+                            placeholder="password..." required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- signInModal end -->
+    <!-- signOutModal -->
+    <div class="modal fade" id="signOutModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div id="signInForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Out</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to log out ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="signOutBtn" class="btn btn-danger">Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signOutModal end -->
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- bootstrap.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+    <!-- TODO: Add Firebase SDK -->
+
+    <!-- auth.js -->
+    <script src="./javascripts/auth.js"></script>
+    <!-- main.js -->
+    <script src="./javascripts/main.js"></script>
+</body>
+
+</html>

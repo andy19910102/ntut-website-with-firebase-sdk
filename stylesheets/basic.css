@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+#navbar {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#footer {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+#footer p {
+    color: #333;
+    font-size: 12px;
+}
