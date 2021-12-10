@@ -35,12 +35,22 @@ function renderProductList() {
                 // console.log("[doc]", doc);
                 // Get the data object from the doc
                 const product = doc.data();
-                console.log("[product]", product);
-
+                // badges HTML
+                let badges = "";
                 product.tags.forEach(tagId => {
                     const tag = tagMap[tagId];
-                    console.log("tag", tag);
-                })
+                    badges += `<span class="badge badge-${tag.color}">
+                        ${tag.name}
+                        </span> `;
+                });
+
+                let priceHTML = `<span>$ ${product.price} NTD</span>`;
+                if (product.useSalePrice) {
+                    // if product.useSalePrice is true
+                    priceHTML = `$
+                    <span class="text-danger">${product.salePrice}</span> 
+                    <s>${product.price}</s> NTD`;
+                }
 
                 const col = `               
                 <div class="col-md-4 col-6">
@@ -49,11 +59,10 @@ function renderProductList() {
                         <div class="card-body">
                             <h4 class="card-title mb-0">${product.name}</h4>
                             <div class="category-list my-2">
-                                <span class="badge badge-danger">#LIMITED</span>
+                                ${badges}
                             </div>
-                            <p class="price">$ 
-                                <span class="text-danger">${product.salePrice}</span> 
-                                <s>${product.price}</s> NTD
+                            <p class="price">
+                                ${priceHTML}
                             </p>
                         </div>
                         <div class="card-footer">
