@@ -59,10 +59,35 @@ function renderTagList() {
                 <div class="color-box bg-${tag.color}"></div>
             </td>
             <td>
-                <button class="btn btn-warning">Update</button>
-                <button class="btn btn-danger">Delete</button>
+                <button data-id="${tag.id}" class="btn btn-warning update-tag-btn">Update</button>
+                <button data-id="${tag.id}" class="btn btn-danger delete-tag-btn">Delete</button>
             </td>
         </tr>`;
         $tagTableBody.append(tableRow);
     })
 }
+
+$("body").delegate(".update-tag-btn", "click", function () {
+    const tagId = $(this).attr("data-id");
+    const tag = tagList.find(t => {
+        return t.id == tagId;
+    });
+    $("#updateTagId").val(tagId);
+    $("#updateTagName").val(tag.name);
+    $("#updateTagColor").val(tag.color);
+    $("#updateTagModal").modal();
+});
+
+$("#updateTagForm").submit(function (e) {
+    e.preventDefault();
+    const tagId = $("#updateTagId").val();
+    const tag = {
+        name: $("#updateTagName").val(),
+        color: $("#updateTagColor").val()
+    }
+    db.doc(`tagList/${tagId}`).update(tag)
+        .then(() => {
+            window.location.reload();
+        })
+        .catch(err => console.log(err));
+});

@@ -187,6 +187,58 @@
     </div>
     <!-- createProductModal end -->
 
+    <!-- updateProductModal -->
+    <div class="modal fade" id="updateProductModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <form id="updateProductForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Product</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="updateProductName">Product Name</label>
+                        <input id="updateProductName" type="text" class="form-control" placeholder="product name..."
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="updateProductTags">Product Tags</label>
+                        <div>
+                            <select class="selectpicker" multiple>
+                                <option>SALE</option>
+                                <option>NEW</option>
+                                <option>BEST</option>
+                                <option>LIMIT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="updateProductPrice">Product Price</label>
+                        <input id="updateProductPrice" type="number" class="form-control" min="0" max="100000"
+                            placeholder="product price..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="updateProductSalePrice">Product Sale Price</label>
+                        <input id="updateProductSalePrice" type="number" class="form-control" min="0" max="100000"
+                            placeholder="product sale price..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="updateProductUseSalePrice">Use Sale Price</label>
+                        <input id="updateProductUseSalePrice" type="checkbox">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- updateProductModal end -->
+
     <!-- createTagModal -->
     <div class="modal fade" id="createTagModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
         aria-hidden="true">
@@ -221,6 +273,42 @@
         </div>
     </div>
     <!-- createTagModal end -->
+
+    <!-- updateTagModal -->
+    <div class="modal fade" id="updateTagModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <form id="updateTagForm" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update New Tag</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="updateTagId" class="d-none">
+                    <div class="form-group">
+                        <label for="updateTagName">Tag Name</label>
+                        <input id="updateTagName" type="text" class="form-control" placeholder="tag name..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="updateTagColor">Tag Color</label>
+                        <select name="updateTagColor" id="updateTagColor" class="form-control">
+                            <option value="primary">Blue</option>
+                            <option value="success">Green</option>
+                            <option value="warning">Yellow</option>
+                            <option value="danger">Red</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- updateTagModal end -->
 
     <!-- signOutModal -->
     <div class="modal fade" id="signOutModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
